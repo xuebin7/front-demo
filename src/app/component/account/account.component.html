@@ -1,0 +1,21 @@
+<nz-table #basicTable [nzData]="dataSet">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>创建时间</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of basicTable.data">
+            <td>{{ data.id }}</td>
+            <td>
+                {{ data.createTime }}
+            </td>
+            <td>
+                <a>Detail</a>
+                <nz-divider nzType="vertical"></nz-divider>
+                <a>Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</nz-table>

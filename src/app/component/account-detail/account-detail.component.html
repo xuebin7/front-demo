@@ -1,0 +1,26 @@
+<div class="container">
+    <div *ngFor="let i of income">
+        <div>
+            收入金额：<input nz-input placeholder="收入" [(ngModel)]="i.amount" [disabled]="inputDisabled()" /> 元
+            <br />
+            收入理由：<input nz-input placeholder="收入理由" [(ngModel)]="i.reason" [disabled]="inputDisabled()" />
+        </div>
+        <br />
+    </div>
+
+    <nz-divider nzText="我是分割线。。。"></nz-divider>
+
+    <div *ngFor="let i of expense">
+        <div>
+            支出金额：<input nz-input placeholder="支出" [(ngModel)]="i.amount" [disabled]="inputDisabled()" /> 元
+            <br />
+            支出理由：<input nz-input placeholder="支出理由" [(ngModel)]="i.reason" [disabled]="inputDisabled()" />
+        </div>
+        <br />
+    </div>
+
+    <nz-space>
+        <button *nzSpaceItem nz-button nzType="primary" (click)="edit()">编辑</button>
+        <button *nzSpaceItem nz-button nzType="primary" (click)="save()">保存</button>
+    </nz-space>
+</div>
